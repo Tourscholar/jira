@@ -48,7 +48,8 @@ export const http = async (
 
 export const useHttp = () => {
   const { user } = useAuth();
-  // TODO 讲解 TS 操作符
+  // Utility Types
+  // 用泛型给它穿入一个其他类型, 然后utility type对它进行某种操作
   return (...[endpoint, config]: Parameters<typeof http>) =>
     http(endpoint, { ...config, token: user?.token });
 };
