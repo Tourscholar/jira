@@ -1,9 +1,9 @@
-import { Button, Form, Input } from "antd";
+import { Form, Input } from "antd";
 import { useAuth } from "context/authContext";
 import { LongButton } from "unauthenticated-app";
 
 export const LoginScreen = () => {
-  const { login, user } = useAuth();
+  const { login } = useAuth();
 
   // HTMLFormElement extends Element
   const handleSubmit = (values: { username: string; password: string }) => {
